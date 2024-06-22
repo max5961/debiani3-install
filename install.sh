@@ -6,70 +6,70 @@ installNoRecommends="sudo apt install --no-install-recommends -y"
 ################
 # APT PACKAGES #
 ################
-"$installNoRecommends" nautilus
-"$installNoRecommends" sddm
+$installNoRecommends nautilus
+$installNoRecommends sddm
 
-"$install" nala
-"$install" firefox-esr
-"$install" fzf
-"$install" zsh
-"$install" cava
-"$install" pulseaudio
-"$install" htop
-"$install" arandr
-"$install" atomicparsley
-"$install" pavucontrol
-"$install" trash-cli
-"$install" alsa-utilslsami
-"$install" alsa-tools alsa-tools-gui
-"$install" nodejs npm gcc
-"$install" nitrogen
-"$install" i3
-"$install" xdotool
+$install nala
+$install firefox-esr
+$install fzf
+$install zsh
+$install cava
+$install pulseaudio
+$install htop
+$install arandr
+$install atomicparsley
+$install pavucontrol
+$install trash-cli
+$install alsa-utils
+$install alsa-tools alsa-tools-gui
+$install nodejs npm gcc
+$install nitrogen
+$install i3
+$install xdotool
 sudo nala remove i3lock
-"$install" yarn
-"$install" gimp
-"$install" git
-"$install" kitty
-"$install" cmake
-"$install" alacritty
-"$install" polybar
-"$install" rofi
-"$install" mpd
-"$install" mpc
-"$install" clangd
-"$install" fuse
-"$install" lib2
-"$install" unzip
-"$install" wget
-"$install" curl
-"$install" xsel
-"$install" x11-apps
-"$install" libxcursor-dev
-"$install" kid3 kid3-cli
-"$install" lf
-"$install" gzip
-"$install" tar
-"$install" picom
-"$install" psmisc
-"$install" ripgrep
-"$install" ffmpeg
-"$install" fd-find
-"$install" bat
-"$install" qtquickcontrols2-5-dev
-"$install" qml-module-qtgraphicaleffects
-"$install" kdenlive
-"$install" neofetch
-"$install" golang
-"$install" luarocks
-"$install" ruby
-"$install" gem2deb
-"$install" default-jre
-"$install" default-jdk
-"$install" javacc
-"$install" php
-"$install" composer
-"$install" vim-julia
+$install yarn
+$install gimp
+$install git
+$install kitty
+$install cmake
+$install alacritty
+$install polybar
+$install rofi
+$install mpd
+$install mpc
+$install clangd
+$install fuse
+$install lib2
+$install unzip
+$install wget
+$install curl
+$install xsel
+$install x11-apps
+$install libxcursor-dev
+$install kid3 kid3-cli
+$install lf
+$install gzip
+$install tar
+$install picom
+$install psmisc
+$install ripgrep
+$install ffmpeg
+$install fd-find
+$install bat
+$install qtquickcontrols2-5-dev
+$install qml-module-qtgraphicaleffects
+$install kdenlive
+$install neofetch
+$install golang
+$install luarocks
+$install ruby
+$install gem2deb
+$install default-jre
+$install default-jdk
+$install javacc
+$install php
+$install composer
+$install vim-julia
 
 curl -fsSL https://install.julialang.org | sh
 sudo luarocks install jsregexp
@@ -128,8 +128,8 @@ fc-cache -fv
 # Font is MononokiNerdFont (MononokiNerdFontMono doesn't exist in this download)
 
 # LFIMG
-"$install" ffmpegthumbnailer
-"$install" imagemagick
-"$install" wkhtmltopdf
+$install ffmpegthumbnailer
+$install imagemagick
+$install wkhtmltopdf
 
 # build epub-thumnailer from github
