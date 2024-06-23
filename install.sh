@@ -1,5 +1,5 @@
 # APT PACKAGES
-sudo apt install --no-install-recommends -y nautilus sddm
+sudo apt install --no-install-recommends -y thunar sddm
 sudo apt install -y i3
 sudo apt remove i3lock
 
@@ -74,7 +74,8 @@ sudo apt install -y \
 	libx11-xcb-dev \
 	libxcb-res0-dev \
 	xdg-utils \
-	lxappearance
+	lxappearance \
+	blackbird-gtk-theme
 
 curl -fsSL https://install.julialang.org | sh
 sudo luarocks install jsregexp
