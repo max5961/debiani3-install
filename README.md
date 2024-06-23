@@ -4,8 +4,13 @@ sudo usermod -a -G sudo <username>
 ```
 Must restart for sudo user changes to take effect
 
+Make sure network is connected before running
+```sh
+./install.sh
+```
+
 #### Before installing any packages, move to Debian testing:
-Edit your apt sources, changing 'stable' (or bookworm, the current codename for
+Edit your apt sources (/etc/apt/sources.list), changing 'stable' (or bookworm, the current codename for
 stable) to 'testing' (or trixie, the current code name for the next stable
 release).
 
@@ -16,8 +21,24 @@ Remove, disable or comment out any other stable-specific apt sources, like
 *-backports or *-updates. Verify that your installation is not fixed to a
 specific release in /etc/apt/apt.conf.d/00default-release
 
+sudoedit /etc/apt/apt.conf.d00default-release
+add the following
+```sh
+APT::Default-Release "testing"
+```
+
+add the following to /etc/apt/preferences.d/testing
+```
+Package: *
+Pin: release a=testing
+Pin-Priority: 900
+```
+
 ##### Use codename 'trixie' to stay with testing until next stable release.
-##### Otherwise apt will revert you back to bookworm
+
+```sh
+sudo apt update && sudo apt upgrade
+```
 
 
 #### Edit $PATH env variable in .bashrc and .zshrc
@@ -49,5 +70,13 @@ Might need to replace part of tmux.conf with:
 set -g default-terminal "xterm-kitty"
 set option -sa terminal-overrides ",xterm*:Tc"
 ```
+
+Useful command for checking yt-dlp version:
+```sh
+curl -s https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest | jq '.["tag_name"]'
+```
+
+Modify alias for bat, apt version downloads as batcat
+
 
 
