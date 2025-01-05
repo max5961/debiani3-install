@@ -98,20 +98,23 @@ sudo apt update
 sudo apt install -y brave-browser
 
 # ZAP APP IMAGE PACKAGE MANAGER
+echo "Installing Zap, app image package manager..."
 sudo wget https://github.com/srevinsaju/zap/releases/download/continuous/zap-amd64 -O /usr/local/bin/zap
 sudo chmod +x /usr/local/bin/zap
 zap --help
 
 # NEOVIM FROM ZAP
+echo "Installing Neovim app image..."
 zap install --github --from neovim/neovim
 sudo ln -s ~/.local/bin/neovim /usr/bin/neovim
 
 # BITWARDEN FROM ZAP
+echo "Installing Bitwarden app image..."
 zap install --github --from bitwarden/clients
 sudo ln -s ~/.local/bin/clients /usr/bin/bitwarden
 
 # VSCODIUM
-zap install --github --from vscodium/vscodium
+# zap install --github --from vscodium/vscodium
 
 # INSTALL PIP AND PIP PACKAGES
 sudo apt install python3-full python3-venv python3 pipx pip
@@ -119,7 +122,7 @@ pipx install yt-dlp beautysh
 
 sudo npm install -g prettier
 sudo npm install -g @fsouza/prettierd
-sudo npm install -g tsc
+sudo npm install -g typescript
 
 # CARGO
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -130,6 +133,8 @@ cargo install xcolor
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # NERD FONTS
+# Do this at the end??? Did this is tty but wasn't there when opened i3 for the
+# first time
 mkdir -p Downloads/builds
 cd Downloads/builds
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts
