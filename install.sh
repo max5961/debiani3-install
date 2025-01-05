@@ -4,96 +4,96 @@ sudo apt install -y i3
 sudo apt remove i3lock
 
 sudo apt install -y \
-	nala \
-	firefox-esr \
-	fzf \
-	zsh \
-	cava \
-	pulseaudio \
-	htop \
-	arandr \
-	atomicparsley \
-	pavucontrol \
-	trash-cli \
-	alsa-utils \
-	alsa-tools alsa-tools-gui \
-	nodejs npm gcc \
-	nitrogen \
-	xdotool \
-	yarn \
-	gimp \
-	git \
-	x11-xserver-utils \
-	kitty \
-	cmake \
-	alacritty \
-	polybar \
-	rofi \
-	mpd \
-	mpc \
-	ncmpcpp \
-	clangd \
-	fuse \
-	unzip \
-	wget \
-	curl \
-	xsel \
-	x11-apps \
-	libxcursor-dev \
-	kid3 kid3-cli \
-	gzip \
-	tar \
-	picom \
-	psmisc \
-	jq \
-	ripgrep \
-	ffmpeg \
-	fd-find \
-	tmux \
-	bat \
-	qtquickcontrols2-5-dev \
-	qml-module-qtgraphicaleffects \
-	kdenlive \
-	neofetch \
-	golang \
-	luarocks \
-	ruby \
-	gem2deb \
-	default-jre \
-	default-jdk \
-	javacc \
-	php \
-	composer \
-	vim-julia \
-	lf \
-	pulseaudio \
-	lxpolkit \
-	libx11-dev \
-	libxft-dev \
-	libxinerama-dev \
-	libx11-xcb-dev \
-	libxcb-res0-dev \
-	xdg-utils \
-	lxappearance \
-	blackbird-gtk-theme
+    nala \
+    firefox-esr \
+    fzf \
+    zsh \
+    cava \
+    pulseaudio \
+    htop \
+    arandr \
+    atomicparsley \
+    pavucontrol \
+    trash-cli \
+    alsa-utils \
+    alsa-tools alsa-tools-gui \
+    nodejs npm gcc \
+    nitrogen \
+    xdotool \
+    yarn \
+    gimp \
+    git \
+    x11-xserver-utils \
+    kitty \
+    cmake \
+    alacritty \
+    polybar \
+    rofi \
+    mpd \
+    mpc \
+    ncmpcpp \
+    clangd \
+    fuse \
+    unzip \
+    wget \
+    curl \
+    xsel \
+    x11-apps \
+    libxcursor-dev \
+    kid3 kid3-cli \
+    gzip \
+    tar \
+    picom \
+    psmisc \
+    jq \
+    ripgrep \
+    ffmpeg \
+    fd-find \
+    tmux \
+    bat \
+    qtquickcontrols2-5-dev \
+    qml-module-qtgraphicaleffects \
+    kdenlive \
+    neofetch \
+    golang \
+    luarocks \
+    ruby \
+    gem2deb \
+    default-jre \
+    default-jdk \
+    javacc \
+    php \
+    composer \
+    vim-julia \
+    lf \
+    pulseaudio \
+    lxpolkit \
+    libx11-dev \
+    libxft-dev \
+    libxinerama-dev \
+    libx11-xcb-dev \
+    libxcb-res0-dev \
+    xdg-utils \
+    lxappearance \
+    blackbird-gtk-theme
 
 curl -fsSL https://install.julialang.org | sh
 sudo luarocks install jsregexp
 go install golang.org/x/tools/cmd/goimports@latest
 
 # EZA (FOR FZF ZSH PLUGINS)
-sudo apt install -y gpg
-sudo mkdir -p /etc/apt/keyrings
-wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
-echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
-sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
-sudo apt update
-sudo apt install -y eza
+# sudo apt install -y gpg
+# sudo mkdir -p /etc/apt/keyrings
+# wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+# echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+# sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
+# sudo apt update
+# sudo apt install -y eza
 
 # BRAVE
 sudo apt install -y curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install -y brave-browser
 
@@ -139,6 +139,6 @@ fc-cache -fv
 
 # LFIMG
 sudo apt install -y \
-	ffmpegthumbnailer \
-	imagemagick \
-	wkhtmltopdf
+    ffmpegthumbnailer \
+    imagemagick \
+    wkhtmltopdf

@@ -1,5 +1,6 @@
 ```
-sudo apt install sudo git
+su root
+apt install sudo git
 sudo usermod -a -G sudo <username>
 ```
 Must restart for sudo user changes to take effect
